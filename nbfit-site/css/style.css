@@ -11,3 +11,72 @@
 .footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:22px;border-top:1px solid rgba(255,255,255,.09);color:#9aa6a0;font-size:.92rem}
 .footer-bottom strong{color:var(--green)}
 @media(max-width:700px){.footer-content,.footer-bottom{display:grid}.footer-contact{width:100%}.footer-contact a{flex:1}}
+
+/* ==========================================================
+   Melhorias — VR Web Design
+   ========================================================== */
+
+/* Delay extra para grids de 4 itens revelando em cascata */
+.delay-3 { transition-delay: .36s; }
+
+/* CTA final com dois botões */
+.cta-box p { max-width: 480px; margin: 0 auto 30px; }
+.cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+.cta-box .btn.ghost { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: #fff; }
+.cta-box .btn.ghost:hover { background: rgba(255,255,255,.16); }
+
+/* Texto-link com seta */
+.text-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 900; color: var(--green-dark); margin-top: 8px; }
+.text-link:hover { text-decoration: underline; }
+
+/* Resultado das calculadoras */
+.result { min-height: 24px; font-weight: 700; }
+.result-error { color: #c0392b; }
+
+/* Depoimentos */
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 10px; }
+.testimonial-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 15px 50px rgba(0,0,0,.04);
+  margin: 0;
+}
+.testimonial-card p { font-size: 1.05rem; line-height: 1.6; color: var(--ink); position: relative; }
+.testimonial-card p::before { content: '"'; font-size: 2.2rem; color: var(--green); line-height: 0; display: inline-block; vertical-align: -8px; margin-right: 4px; }
+.testimonial-card footer { margin-top: 16px; display: flex; flex-direction: column; gap: 2px; }
+.testimonial-card footer strong { font-size: .95rem; }
+.testimonial-card footer span { color: var(--muted); font-size: .82rem; }
+.testimonials-note {
+  text-align: center;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: .85rem;
+  background: #fff9e8;
+  border: 1px dashed #e0c97a;
+  border-radius: 14px;
+  padding: 12px 18px;
+}
+
+/* Footer nav central */
+.footer-content { gap: 30px; }
+.footer-nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.footer-nav a { color: #cfd7d1; font-weight: 700; }
+.footer-nav a:hover { color: var(--green); }
+.footer-bottom a { color: inherit; }
+.footer-bottom a:hover strong { text-decoration: underline; }
+
+/* Validação de formulário */
+.field-error { display: block; min-height: 18px; color: #c0392b; font-size: .8rem; font-weight: 700; margin-top: 4px; }
+.input-error { border-color: #c0392b !important; background: #fff5f5; }
+.form-disclaimer { color: var(--muted); font-size: .82rem; text-align: center; margin-top: 4px; }
+
+/* Floating WhatsApp com ícone SVG */
+.floating-whatsapp svg { display: block; }
+.floating-whatsapp:hover { transform: scale(1.08); }
+
+@media (max-width: 900px) {
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .footer-content { flex-direction: column; align-items: flex-start; }
+}
