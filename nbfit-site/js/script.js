@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = '5599999999999'; // Troque pelo número real do Professor Neto. Ex: 5585999999999
+const WHATSAPP_NUMBER = '5585999100100'; // Troque pelo número real do Professor Neto. Ex: 5585999999999
 const DEFAULT_MESSAGE = 'Olá, Professor Neto! Vim pelo site e gostaria de saber mais sobre a avaliação inicial.';
 const header = document.querySelector('[data-header]');
 const nav = document.querySelector('[data-nav]');
