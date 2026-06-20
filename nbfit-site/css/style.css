@@ -80,3 +80,59 @@
   .testimonial-grid { grid-template-columns: 1fr; }
   .footer-content { flex-direction: column; align-items: flex-start; }
 }
+
+/* ==========================================================
+   Correção de overflow / layout solto no mobile
+   ========================================================== */
+
+html { overflow-x: hidden; }
+
+h1, h2, h3 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Impede que o card "glass" e os orbit-items vazem da tela */
+.hero-card { max-width: 100%; overflow: visible; }
+.profile-orbit { max-width: 100%; }
+.glass { max-width: calc(100% - 24px); box-sizing: border-box; }
+
+@media (max-width: 480px) {
+  .container { width: min(1160px, calc(100% - 28px)); }
+
+  h1 { font-size: 2.35rem; line-height: 1.05; letter-spacing: -.04em; }
+  h2 { font-size: 1.7rem; letter-spacing: -.03em; }
+
+  .hero { padding-top: 110px; }
+  .hero-stats { gap: 10px; }
+  .hero-stats div { min-width: 0; flex: 1 1 calc(50% - 10px); padding: 12px 14px; }
+  .hero-stats strong { font-size: 1.5rem; }
+
+  .hero-card { min-height: auto; }
+  .profile-orbit {
+    width: min(320px, 86vw);
+    height: min(380px, 86vw);
+    margin: 0 auto;
+  }
+  .profile-orbit:after { font-size: 3rem; }
+
+  /* os "orbit-item" usam offsets negativos (-18px) que vazam em telas pequenas */
+  .orbit-item { padding: 9px 13px; font-size: .85rem; }
+  .one { top: 30px; left: 6px; }
+  .two { right: 6px; top: 150px; }
+  .three { left: 18px; bottom: 28px; }
+
+  .glass {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  .testimonial-card, .steps article, .benefit-card, .price-card, .credential, .tool-card {
+    padding: 20px;
+  }
+
+  .section { padding: 56px 0; }
+}
